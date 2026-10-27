@@ -1,0 +1,19 @@
+1. Push laddar upp ändringar man har gjort lokalt till sin remote repository.
+   Pull laddar ner ändringar från remote repository.
+2. git log visar alla commits som gjorts, medans git status visar om det
+   det finns ändringar som inte har commitat, samt ifall dessa ändringar är staged.
+3. Git branch skapar en miljö där ändringar kan göras utan att påverka andra grenar. 
+   Branching möjliggör att man kan jobba på kod och testa den, men enkelt kunna gå tillbaka till ursprungskoden. 
+   När man är nöjd med ändringarna man gjort kan man mergea grenarna.
+4. För att rulla tillbaka koden till ett tidigare tillstånd så kan man använda reset eller revert.
+   
+   git reset
+   Bra att använda om man vill snygga ha en lättläst historik och inte måste ha lika stor koll på ändringar.
+   Flaggor som kan användas med reset:
+	--soft = Återkallar commit och behåller ändringarna staged
+	--mixed = Återkallar och behåller ändringar unstaged
+	--hard = Återkallar och raderar ändringar
+
+   git revert
+   Gör en ny commit som återkallar vald commit. Gör det tydligt att följa ändringar och är bra att använda när man 
+   jobbar flera på ett och samma projekt.
